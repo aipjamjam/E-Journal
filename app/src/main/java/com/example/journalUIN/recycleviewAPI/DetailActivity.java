@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class DetailActivity extends AppCompatActivity {
 
     TextView judul_det, nama_det, url_det, last_det;
-    String jdl, nm, urll, lastt;
+    String jdl, nm, urll, lastt,link;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,7 @@ public class DetailActivity extends AppCompatActivity {
         nama_det.setText(nm);
         url_det.setText(urll);
         last_det.setText(lastt);
+
     }
 
     @Override
@@ -64,8 +65,8 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     public void open_jurnal(View view) {
-        String alamat = urll;
-        Uri webpage = Uri.parse(alamat);
+        //link = getIntent().getStringExtra("url");
+        Uri webpage = Uri.parse(urll);
         Intent i = new Intent(Intent.ACTION_VIEW,webpage);
         startActivity(i);
     }

@@ -12,12 +12,12 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class BuahAdapter extends RecyclerView.Adapter<BuahAdapter.BuahViewHolder>{
-    private List<Buah> buah;
+public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.BuahViewHolder>{
+    private List<Journal> journal;
     private Context context;
 
-    public BuahAdapter(List<Buah> buah, Context context) {
-        this.buah = buah;
+    public JournalAdapter(List<Journal> journal, Context context) {
+        this.journal = journal;
         this.context = context;
     }
 
@@ -30,7 +30,7 @@ public class BuahAdapter extends RecyclerView.Adapter<BuahAdapter.BuahViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull BuahViewHolder buahViewHolder, int i) {
-        final Buah d = buah.get(i);
+        final Journal d = journal.get(i);
         //buahViewHolder.judul_jurnal.setText(d.getPath());
         buahViewHolder.nama_jurnal.setText(d.getSetting_value());
 
@@ -52,7 +52,7 @@ public class BuahAdapter extends RecyclerView.Adapter<BuahAdapter.BuahViewHolder
 
     @Override
     public int getItemCount() {
-        return buah.size();
+        return journal.size();
     }
 
     class BuahViewHolder extends RecyclerView.ViewHolder {

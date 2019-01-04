@@ -2,7 +2,6 @@ package com.example.journalUIN.recycleviewAPI;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView label;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private List<Buah> contacts;
-    private BuahAdapter adapter;
+    private List<Journal> contacts;
+    private JournalAdapter adapter;
     private ApiInterface apiInterface;
     ProgressBar progressBar;
 
@@ -46,19 +45,19 @@ public class MainActivity extends AppCompatActivity {
 
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
-        Call<List<Buah>> call = apiInterface.getBuah(type);
-        call.enqueue(new Callback<List<Buah>>() {
+        Call<List<Journal>> call = apiInterface.getBuah(type);
+        call.enqueue(new Callback<List<Journal>>() {
             @Override
-            public void onResponse(Call<List<Buah>> call, Response<List<Buah>> response) {
+            public void onResponse(Call<List<Journal>> call, Response<List<Journal>> response) {
                 progressBar.setVisibility(View.GONE);
                 contacts = response.body();
-                adapter = new BuahAdapter(contacts, MainActivity.this);
+                adapter = new JournalAdapter(contacts, MainActivity.this);
                 recyclerView.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
             }
 
             @Override
-            public void onFailure(Call<List<Buah>> call, Throwable t) {
+            public void onFailure(Call<List<Journal>> call, Throwable t) {
                 progressBar.setVisibility(View.GONE);
                 Toast.makeText(MainActivity.this, "Error\n"+t.toString(), Toast.LENGTH_LONG).show();
             }

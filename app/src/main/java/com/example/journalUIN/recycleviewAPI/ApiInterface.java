@@ -8,7 +8,7 @@ import retrofit2.http.Query;
 
 public interface ApiInterface {
     @GET("index.php")
-    Call<List<Buah>> getBuah(
+    Call<List<Journal>> getBuah(
             @Query("item_type") String item_type
     );
 }

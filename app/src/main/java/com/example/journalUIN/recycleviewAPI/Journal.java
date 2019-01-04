@@ -2,11 +2,11 @@ package com.example.journalUIN.recycleviewAPI;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Buah {
+public class Journal {
     @SerializedName("journal_id") private int Journal_id;
     @SerializedName("path") private String Path;
     @SerializedName("setting_value") private String Setting_value;
-    @SerializedName("uri") private String Url;
+    @SerializedName("url") private String Url;
     @SerializedName("lastissue") private String Lastissue;
 
     public int getJournal_id() {

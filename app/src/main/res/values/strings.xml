@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Fruits Shop</string>
+    <string name="opt_menu1">Profile</string>
+    <string name="opt_menu2">Contact</string>
+    <string name="namabuah">Avocado</string>
+    <string name="harga">Price</string>
+    <string name="juduldetail">Fruit Details</string>
+    <string name="detail">Lorem ipsum dolor sit amet</string>
+    <string name="judulprofil">About me</string>
+    <string name="jurusan">Informatics Engineering Students</string>
+    <string name="btnbeli">Buy</string>
+    <string name="profile1">Agil Saepul Muharam 1157050011</string>
+    <string name="profile2">Hermawan Gustiana   1157050068</string>
+    <string name="profile3">Moch. Arif Zamzami  1157050</string>
+</resources>

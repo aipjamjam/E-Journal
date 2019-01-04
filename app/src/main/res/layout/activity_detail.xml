@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/dokumen"/>
+
+        <TextView
+            android:id="@+id/judul_det"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="INI JUDUL JURNAL"/>
+
+        <TextView
+            android:id="@+id/nama_det"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="INI PENERBIT"/>
+
+        <TextView
+            android:id="@+id/url_det"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="INI URL"/>
+
+        <TextView
+            android:id="@+id/last_det"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="INI LASTISSUE"/>
+
+        <Button
+            android:id="@+id/btn_jurnal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#ff585a"
+            android:textColor="#fff"
+            android:text="OPEN JOURNAL"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:onClick="open_jurnal"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
